@@ -174,3 +174,25 @@ footer {
 .hover-white:hover {
     color: var(--lmf-white) !important;
 }
+
+/* Efeito de hover consistente em todo o site */
+.hover-card {
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--lmf-gray-metallic) !important;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+    border-color: var(--lmf-blue) !important;
+}
+
+/* Efeito específico para o quadrão de destaque comercial */
+.hover-card-highlight {
+    transition: all 0.3s ease-in-out;
+}
+
+.hover-card-highlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 43, 91, 0.15) !important;
+}
