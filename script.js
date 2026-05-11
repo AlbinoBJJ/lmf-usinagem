@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide Icons
-    lucide.createIcons();
-
-    // Scroll Effect for Navbar
+    // Efeito de rolagem na barra de navegação (Navbar)
     window.onscroll = function() {
         const nav = document.querySelector('.navbar');
         if (window.pageYOffset > 50) {
-            nav.style.boxShadow = "0 5px 15px rgba(0,0,0,0.1)";
+            nav.style.boxShadow = "0 5px 15px rgba(0,0,0,0.15)";
             nav.style.padding = "0.5rem 0";
         } else {
             nav.style.boxShadow = "none";
@@ -14,21 +11,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Form Handlers
+    // Controle de envio do Formulário de Contato
     const contactForm = document.getElementById('contactForm');
-    if(contactForm) {
+    if (contactForm) {
         contactForm.onsubmit = (e) => {
             e.preventDefault();
-            alert('Mensagem enviada com sucesso! Nossa equipe entrará em contato em breve.');
+            alert('Mensagem enviada com sucesso! Nossa equipe comercial entrará em contato em breve.');
             e.target.reset();
         };
     }
 
+    // Controle de envio do Formulário de Orçamento
     const quoteForm = document.getElementById('quoteForm');
-    if(quoteForm) {
+    if (quoteForm) {
         quoteForm.onsubmit = (e) => {
             e.preventDefault();
-            alert('Solicitação de orçamento recebida. Analisaremos seu projeto técnico imediatamente.');
+            alert('Solicitação de orçamento recebida! Nossa engenharia analisará seu projeto técnico imediatamente.');
             e.target.reset();
         };
     }

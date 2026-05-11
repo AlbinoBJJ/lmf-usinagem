@@ -24,7 +24,7 @@ main {
     padding-bottom: 1px;
 }
 
-h1, h2, h3, .nav-link {
+h1, h2, h3, h4, h5, h6, .nav-link {
     font-family: 'Roboto Condensed', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -33,7 +33,6 @@ h1, h2, h3, .nav-link {
 .btn, .card, .form-control, .form-select {
     border-radius: 0 !important;
 }
-
 
 .navbar {
     background-color: var(--lmf-white);
@@ -49,7 +48,6 @@ h1, h2, h3, .nav-link {
     position: relative;
     display: inline-block;
 }
-
 
 .nav-link::after {
     content: '';
@@ -68,18 +66,24 @@ h1, h2, h3, .nav-link {
     width: 70%; 
 }
 
-
+/* Hero Section Otimizada usando a foto do laser em altíssima qualidade */
 .hero {
-    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 74, 153, 0.7)), 
-                url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=2000');
+    background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 74, 153, 0.75)), 
+                url('img/laser_1.jpeg');
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    background-attachment: scroll;
+    height: 75vh;
     display: flex;
     align-items: center;
     color: white;
-    border-top: 1px solid var(--lmf-dark-blue);
-    border-bottom: 1px solid var(--lmf-dark-blue);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 80px 0;
+    }
 }
 
 .page-section {
@@ -95,8 +99,13 @@ h1, h2, h3, .nav-link {
 }
 
 .service-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.img-gallery-fit {
+    height: 220px;
+    object-fit: cover;
 }
 
 .whatsapp-fab {
@@ -110,12 +119,14 @@ h1, h2, h3, .nav-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     z-index: 1000;
     transition: transform 0.3s;
 }
 
-.whatsapp-fab:hover { transform: scale(1.1); }
+.whatsapp-fab:hover { 
+    transform: scale(1.1); 
+}
 
 footer {
     background-color: var(--lmf-dark-gray);
@@ -132,16 +143,6 @@ footer {
     padding-left: 15px;
 }
 
-.placeholder-img {
-    background: #e2e8f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #64748b;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
 .btn-industrial {
     background-color: var(--lmf-blue);
     color: white;
@@ -149,9 +150,13 @@ footer {
     padding: 12px 30px;
     font-weight: bold;
     transition: background 0.3s;
+    text-transform: uppercase;
 }
 
-.btn-industrial:hover { background-color: var(--lmf-dark-blue); }
+.btn-industrial:hover { 
+    background-color: var(--lmf-dark-blue); 
+    color: white;
+}
 
 .whats_image {
     width: 35px;
@@ -163,10 +168,9 @@ footer {
     margin-right: 0;
 }
 
-.google-map {
-    width: 100%;
-    height: 100px;
-    border: 0;
-    border-radius: 15px;
-    display: block;
+.hover-white {
+    transition: color 0.2s ease-in-out;
+}
+.hover-white:hover {
+    color: var(--lmf-white) !important;
 }
